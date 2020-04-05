@@ -23,7 +23,7 @@ fs:
   follow_symlinks: false
 elasticsearch:
   nodes:
-  - url: "http://127.0.0.1:9200"
+  - url: "http://elasticsearch:9200"
   bulk_size: 100
   flush_interval: "5s"
   byte_size: "10mb"

@@ -12,10 +12,13 @@ RUN unzip fscrawler-es7-2.7-20200403.145039-96.zip
 WORKDIR /runtime/fscrawler-es7-2.7-SNAPSHOT
 
 RUN mkdir /root/.fscrawler
+RUN mkdir /root/.fscrawler/arsredovisningar
+RUN mkdir /root/.fscrawler/regleringsbrev
 
-COPY config/arsredovisningar /root/.fscrawler
-COPY config/regleringsbrev /root/.fscrawler
+COPY ./config/arsredovisningar/_settings.yaml /root/.fscrawler/arsredovisningar
+COPY ./config/regleringsbrev/_settings.yaml /root/.fscrawler/regleringsbrev
 
 RUN mkdir /runtime/data
 
 ENTRYPOINT ["bin/fscrawler"]
+
