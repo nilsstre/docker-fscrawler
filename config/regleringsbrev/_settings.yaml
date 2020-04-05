@@ -1,7 +1,7 @@
 name: "regleringsbrev"
 fs:
   url: "/runtime/data/"
-  update_rate: "1m"
+  update_rate: "15m"
   excludes:
   - "*/~*"
   json_support: false
