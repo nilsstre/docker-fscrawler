@@ -16,4 +16,4 @@ RUN mkdir /root/.fscrawler/project
 
 RUN mkdir /runtime/data
 
-ENTRYPOINT ["bin/fscrawler", "project"]
+ENTRYPOINT ["bin/fscrawler", "project", "--loop 1"]
